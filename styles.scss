@@ -1,0 +1,93 @@
+// Variables
+
+$html5: #e44d26;
+$css3: #42a4f3;
+$js: #ffca28;
+$github: #333;
+$codepen: #1e1f26;
+$youtube: #cd201f;
+
+// Reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+// Icons
+
+.fab { font-size: 40px; }
+.fa-html5 { background: $html5; }
+.fa-css3 { background: $css3; }
+.fa-js { background: $js; }
+.fa-github { background: $github; }
+.fa-codepen { background: $codepen; }
+.fa-youtube { background: $youtube; }
+
+// Component masonry 
+
+.masonry-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-rows: 80px;
+  grid-auto-flow: dense;
+  padding: 4px;
+
+  > .item {
+    display: flex;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+
+    .content {
+      margin: 4px;
+      display: grid;
+      place-content: center;
+      flex: 1;
+      border-radius: 4px;
+      color: #fff;
+    }
+  }
+}
+
+.span-1-2 {
+  grid-column-end: span 1;
+  grid-row-end: span 2;
+}
+.span-2-2 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+.span-2-1 {
+  grid-column-end: span 2;
+  grid-row-end: span 1;
+}
+
+.span-1-3 {
+  grid-column-end: span 1;
+  grid-row-end: span 3;
+}
+.span-2-3 {
+  grid-column-end: span 2;
+  grid-row-end: span 3;
+}
+.span-3-3 {
+  grid-column-end: span 3;
+  grid-row-end: span 3;
+}
+.span-3-2 {
+  grid-column-end: span 3;
+  grid-row-end: span 2;
+}
+.span-3-1 {
+  grid-column-end: span 3;
+  grid-row-end: span 1;
+}
